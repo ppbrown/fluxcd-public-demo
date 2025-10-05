@@ -6,13 +6,17 @@ k8s based [Flux CD Orchestration tool](https://fluxcd.io/)
 # Goal
 To allow anyone to point to this repo, and see how Flux CD deploys an application
 
-# Prerequisites
-Flux is designed to be CLI based.
-(There techinically are GUI wrappers, but at its core, it is CLI, so thats what we will use here)
+# Prerequisites and install steps
+
+Before you go any further, understnad that Flux is primarily command line (CLI) based.
+
+There techinically are GUI wrappers for it, but at its core, it is CLI based. 
+If that makes you uncomfortable, /This is not the guide you are looking for/
 
 ## 0. Have a working k8s cluster
 
-you need to already have "kubectl" installed, and talking to your k8s cluster as admin
+Make sure that you need to already have "kubectl" installed, and talking to your functioning k8s cluster as admin.
+It can be a "cluster" of 1 node, for demo purposes. But "kubectl get all" should actually do something useful.
 
 ## 1. Install the flux CLI
 
@@ -29,7 +33,7 @@ But the EasyMode(tm) method is to just use
 
 Normally, you would also need to set up github tokens, but this is a PUBLIC repo, you dont have to do that.
 
-## 3. ... profit!
+## 3. ... Profit!
 
 Okay, just kidding. But putting something here temporarily. FYI, I'm not done with the backend, so the above steps
 DO NOT ACTUALLY WORK YET.
