@@ -27,9 +27,9 @@ You need to [install the Flux CLI](https://fluxcd.io/flux/installation/#install-
 ## 2. Use the CLI to get the flux service up and running
 
 Technically, there are [fancier IaC ways to do this](https://registry.terraform.io/providers/fluxcd/flux/latest).
-But the EasyMode(tm) method is to just use
+But the EasyMode(tm) method is to just use the following:
 
-    flux install
+    flux install   # Sets up the flux controllers in your cluster
 
     flux create source git ppbrown-demo \
      --url=https://github.com/ppbrown/fluxcd-public-demo \
