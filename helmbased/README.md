@@ -54,8 +54,22 @@ There is also the non-dynamic resource view
     │   └── Deployment/default/guestbook-helm-guestbook
     └── GitRepository/flux-system/argocd-examples
 
+And the "all" view from flux... which, sad to say, is a bit lacking:
 
-## More detailed check
+    $ flux get all
+
+    NAME                            REVISION                SUSPENDED       READY   MESSAGE
+    gitrepository/argocd-examples   master@sha1:0d521c6e    False           True    stored artifact for revision 'master@sha1:0d521c6e'
+    gitrepository/ppbrown-demo      main@sha1:2acc1fde      False           True    stored artifact for revision 'main@sha1:2acc1fde'
+
+    NAME                            REVISION        SUSPENDED       READY   MESSAGE
+    helmchart/default-guestbook     0.1.0           False           True    packaged 'helm-guestbook' chart with version '0.1.0'
+
+    NAME                    REVISION                SUSPENDED       READY   MESSAGE
+    kustomization/helmbased main@sha1:2acc1fde      False           True    Applied revision: main@sha1:2acc1fde
+
+
+## More detailed check via Helm
 
 Since we used helm under the covers, we can then use helm status checks for more details.
 When it has fully deployed, you can expect something like the following:
