@@ -1,12 +1,30 @@
 # fluxcd-public-demo
 
-This is repo is a demo for the k8s based [Flux CD Orchestration tool](https://fluxcd.io/)
+This is repo holds EasyMode(tm) demos for the k8s based [Flux CD Orchestration tool](https://fluxcd.io/)
 
-(It is superficially similar to Argo CD in some ways, if you have heard of that, but not Flux)
+(If you haven't heard of Flux before, it is superficially similar to Argo CD)
 
-There are a lack of simple straightforward walkthroughs, so I created this repo as a demo.
-Anyone can use this repo to quickly and easily start up a trivial little
-kubernetes hosted demo application, to see how Flux CD deploys an application
+There are a lack of simple straightforward demos for Flux at present, so I created this repo.
+My hope is that anyone can use this repo to quickly and easily start up a trivial little
+kubernetes hosted demo application, to get a feel for Flux with a minimum of effort.
+
+Technically, there are [fancier IaC ways to do some of the setup steps](https://registry.terraform.io/providers/fluxcd/flux/latest).
+But I'm focusing on EasyMode(tm) for beginner puprposes.
+
+# Choose your Adventure
+
+There are now TWO possible demo paths to choose from.
+Flux allows use of "direct" kustomization definitions of apps, or use of Helm charts
+(or even both, but we dont need to go into that here)
+
+This choice may be driven by more than just "Do I like/dislike Helm charts?"
+
+Base Flux does not give you much in the way of hand-holding. It does not give you deep diagnostics on 
+components that have been deployed (You are expected to use `kubectl`)
+However, if you have deployed helm under flux, you can then use things like
+
+    helm status guestbook --show-resources
+
 
 # Prerequisites and install steps
 
@@ -15,48 +33,25 @@ Before you go any further, understand that Flux is primarily command line (CLI) 
 There techinically are GUI wrappers for it, but at its core, Flux is CLI based. 
 If that makes you uncomfortable, /This is not the guide you are looking for/
 
-## 0. Have a working k8s cluster
+## 1. Have a working k8s cluster
 
 Make sure that you need to already have "kubectl" installed, and talking to your functioning k8s cluster as admin.
 It can be a "cluster" of 1 node, for demo purposes. But "kubectl get all" should actually do something useful.
 
-## 1. Install the flux CLI
+## 2. Install the flux CLI
 
 You need to [install the Flux CLI](https://fluxcd.io/flux/installation/#install-the-flux-cli) by hand.
 
-## 2. Use the CLI to get the flux service up and running
+## 3. Pick your poison
 
-Technically, there are [fancier IaC ways to do this](https://registry.terraform.io/providers/fluxcd/flux/latest).
-But the EasyMode(tm) method is to just use the following:
-
-    flux install   # Sets up the flux controllers in your cluster
-
-    flux create source git ppbrown-demo \
-     --url=https://github.com/ppbrown/fluxcd-public-demo \
-     --branch=main --interval=1m
-
-    flux create kustomization demo-app-group \
-     --source=GitRepository/ppbrown-demo \
-     --path=./clusters/ppbrown-demo \
-     --prune=true --interval=1m
+* [Simple app path](clusters/ppbrown-demo/README.md)
+* [Helm based deployment](helmbased/README.md)
 
 
 
-Normally, you would also need to set up github tokens, but this is a PUBLIC repo, so you dont have to do that.
+# Random notes about Flux CD
 
-## 3. ... Profit!
-
-The above steps now work!
-
-The diagnostic command below should eventually show you something like the following:
-
-    $ flux get kustomizations
-
-    NAME            REVISION                SUSPENDED       READY   MESSAGE
-    demo-cluster    main@sha1:xyzabc      False           True    Applied revision: main@sha1:xyzabc....
-
-
-### Note: This is not Argo CD
+##  This is not Argo CD
 
 There is no special web server.
 
