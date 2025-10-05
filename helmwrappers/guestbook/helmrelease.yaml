@@ -1,0 +1,35 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: guestbook
+  namespace: default
+spec:
+  interval: 1m
+  chart:
+    spec:
+      # Use the chart from the Git repo (subfolder)
+      chart: helm-guestbook
+      sourceRef:
+        kind: GitRepository
+        name: argocd-examples
+        namespace: flux-system
+      version: "*"   # take whatever is in the repo
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    replicaCount: 1
+    image:
+      pullPolicy: IfNotPresent
+    service:
+      type: ClusterIP
+    resources:
+      requests:
+        cpu: 50m
+        memory: 64Mi
+      limits:
+        cpu: 200m
+        memory: 128Mi
