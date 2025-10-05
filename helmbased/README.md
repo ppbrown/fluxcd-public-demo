@@ -24,3 +24,28 @@ do the following
       --source=GitRepository/ppbrown-demo \
       --path=./helmbased \
       --prune=true --interval=1m
+
+# Status check
+
+Since we used helm under the covers, we can then use helm status checks for more details.
+When it has fully deployed, you can expect something like the following:
+
+    $ helm status guestbook --show-resources
+
+    NAME: guestbook
+    LAST DEPLOYED: Sun Oct  5 18:53:04 2025
+    NAMESPACE: default
+    STATUS: deployed
+    REVISION: 1
+    RESOURCES:
+    ==> v1/Deployment
+    NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+    guestbook-helm-guestbook   1/1     1            1           28m
+
+        ==> v1/Pod(related)
+    NAME                                        READY   STATUS    RESTARTS   AGE
+    guestbook-helm-guestbook-6c588dc74f-qtxjg   1/1     Running   0          28m
+
+    ==> v1/Service
+    NAME                       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+    guestbook-helm-guestbook   ClusterIP   10.152.183.98   <none>        80/TCP    28m
