@@ -54,3 +54,13 @@ The diagnostic command below should eventually show you something like the follo
 
     NAME            REVISION                SUSPENDED       READY   MESSAGE
     demo-cluster    main@sha1:xyzabc      False           True    Applied revision: main@sha1:xyzabc....
+
+
+### Note: This is not Argo CD
+
+There is no special web server.
+
+There is no special service port.
+
+The flux CLI communicates with the backend using native kubernetes API calls. So there's no extra holes in your firewalls to make.
+
