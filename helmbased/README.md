@@ -6,6 +6,16 @@ flux wont give the status of components very well.
 
 However, if you use flux with a helmrelease, it will show more depth. 
 
+# Warning
+
+This tree is currently a bit of a cheat. Flux does support a more
+direct use of Helm charts, via "flux .. helmrelease".
+
+For right now, due to ease of use, we currently piggyback helm
+on top of the standard "flux ... kustomization" use.
+
+# Usage
+
 This tree currently focuses on using third-party helm charts.
 However, you can just as easily use your own local ones.
 Additionally, this tree uses Helm-in-github. However, Flux can
