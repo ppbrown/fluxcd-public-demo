@@ -36,7 +36,26 @@ do the following
       --path=./helmbased \
       --prune=true --interval=1m
 
-# Status check
+# Status checks
+
+## Base level Flux check
+
+    $ flux get helmreleases  -n default
+
+    NAME            REVISION        SUSPENDED       READY   MESSAGE
+    guestbook       0.1.0           False           True    Helm install succeeded for release default/guestbook.v1 ...
+
+There is also the non-dynamic resource view
+
+    $ flux tree kustomization helmbased
+        Kustomization/flux-system/helmbased
+    ├── HelmRelease/default/guestbook
+    │   ├── Service/default/guestbook-helm-guestbook
+    │   └── Deployment/default/guestbook-helm-guestbook
+    └── GitRepository/flux-system/argocd-examples
+
+
+## More detailed check
 
 Since we used helm under the covers, we can then use helm status checks for more details.
 When it has fully deployed, you can expect something like the following:
