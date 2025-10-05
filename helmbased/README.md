@@ -8,6 +8,8 @@ However, if you use flux with a helmrelease, it will show more depth.
 
 This tree currently focuses on using third-party helm charts.
 However, you can just as easily use your own local ones.
+Additionally, this tree uses Helm-in-github. However, Flux can
+also use helm repos directly.
 
 To install this tree's contents within Flux, 
 do the following
