@@ -27,15 +27,24 @@ You need to [install the Flux CLI](https://fluxcd.io/flux/installation/#install-
 Technically, there are [fancier IaC ways to do this](https://registry.terraform.io/providers/fluxcd/flux/latest).
 But the EasyMode(tm) method is to just use
 
-    flux bootstrap github \
-     --repository=https://github.com/ppbrown/fluxcd-public-demo \
-     --path=clusters/ppbrown-demo
+    flux install
 
-Normally, you would also need to set up github tokens, but this is a PUBLIC repo, you dont have to do that.
+    flux create source git ppbrown-demo \
+     --url=https://github.com/ppbrown/fluxcd-public-demo \
+     --branch=main --interval=1m
+
+    flux create kustomization demo-cluster \
+     --source=GitRepository/ppbrown-demo \
+     --path=./clusters/ppbrown-demo \
+     --prune=true --interval=1m
+
+
+
+Normally, you would also need to set up github tokens, but this is a PUBLIC repo, so you dont have to do that.
 
 ## 3. ... Profit!
 
 Okay, just kidding. But putting something here temporarily. FYI, I'm not done with the backend, so the above steps
-DO NOT ACTUALLY WORK YET.
+DO NOT DO ANYTHING YET.
 
 But in theory, they will in the near future.
