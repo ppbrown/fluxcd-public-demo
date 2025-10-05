@@ -24,4 +24,4 @@ do the following
       --source=GitRepository/ppbrown-demo \
       --path=./helmwrappers/guestbook \
       --target-namespace=default \
-      --prune=true -interval=1m
+      --prune=true --interval=1m
