@@ -11,7 +11,7 @@ However, if you use flux with a helmrelease, it will show more depth.
 Oddly, while "flux get customizations" works out of the box, "flux get helmreleases"
 does not. YOU MUST SPECIFY THE NAMESPACE.
 
-So, for our exammple here, you will want to use
+So, for our example here, you will want to use
 
     flux get helmreleases  -n default
 
