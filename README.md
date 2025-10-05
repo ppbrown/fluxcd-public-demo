@@ -44,7 +44,11 @@ Normally, you would also need to set up github tokens, but this is a PUBLIC repo
 
 ## 3. ... Profit!
 
-Okay, just kidding. But putting something here temporarily. FYI, I'm not done with the backend, so the above steps
-DO NOT DO ANYTHING YET.
+Okay, just kidding. The above steps DO NOT DO ANYTHING USEFUL YET.
 
-But in theory, they will in the near future.
+But they do actually show you a "working" FluxCD setup.  The following diagnostic command DOES work:
+
+    $ flux get kustomizations
+
+    NAME            REVISION                SUSPENDED       READY   MESSAGE
+    demo-cluster    main@sha1:4a72b38e      False           True    Applied revision: main@sha1:4a72b38e
