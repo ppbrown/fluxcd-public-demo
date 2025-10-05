@@ -1,16 +1,18 @@
 # fluxcd-public-demo
 
-This is a work in progress, to try out the
-k8s based [Flux CD Orchestration tool](https://fluxcd.io/)
+This is repo is a demo for the k8s based [Flux CD Orchestration tool](https://fluxcd.io/)
 
-# Goal
-To allow anyone to point to this repo, and see how Flux CD deploys an application
+(It is superficially similar to Argo CD in some ways, if you have heard of that, but not Flux)
+
+There are a lack of simple straightforward walkthroughs, so I created this repo as a demo.
+Anyone can use this repo to quickly and easily start up a trivial little
+kubernetes hosted demo application, to see how Flux CD deploys an application
 
 # Prerequisites and install steps
 
-Before you go any further, understnad that Flux is primarily command line (CLI) based.
+Before you go any further, understand that Flux is primarily command line (CLI) based.
 
-There techinically are GUI wrappers for it, but at its core, it is CLI based. 
+There techinically are GUI wrappers for it, but at its core, Flux is CLI based. 
 If that makes you uncomfortable, /This is not the guide you are looking for/
 
 ## 0. Have a working k8s cluster
@@ -44,11 +46,11 @@ Normally, you would also need to set up github tokens, but this is a PUBLIC repo
 
 ## 3. ... Profit!
 
-Okay, just kidding. The above steps DO NOT DO ANYTHING USEFUL YET.
+The above steps now work!
 
-But they do actually show you a "working" FluxCD setup.  The following diagnostic command DOES work:
+The diagnostic command below should eventually show you something like the following:
 
     $ flux get kustomizations
 
     NAME            REVISION                SUSPENDED       READY   MESSAGE
-    demo-cluster    main@sha1:4a72b38e      False           True    Applied revision: main@sha1:4a72b38e
+    demo-cluster    main@sha1:4a72b38e      False           True    Applied revision: main@sha1:xyzabc....
