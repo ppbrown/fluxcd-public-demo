@@ -6,13 +6,14 @@ flux wont give the status of components very well.
 
 However, if you use flux with a helmrelease, it will show more depth. 
 
-# Warning
+# WARNING on namespaces
 
-This tree is currently a bit of a cheat. Flux does support a more
-direct use of Helm charts, via "flux .. helmrelease".
+Oddly, while "flux get customizations" works out of the box, "flux get helmreleases"
+does not. YOU MUST SPECIFY THE NAMESPACE.
 
-For right now, due to ease of use, we currently piggyback helm
-on top of the standard "flux ... kustomization" use.
+So, for our exammple here, you will want to use
+
+    flux get helmreleases  -n default
 
 # Usage
 
