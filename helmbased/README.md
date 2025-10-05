@@ -21,5 +21,4 @@ do the following
     flux create kustomization helmbased \
       --source=GitRepository/ppbrown-demo \
       --path=./helmbased \
-      --target-namespace=default \
       --prune=true --interval=1m
