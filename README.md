@@ -35,7 +35,7 @@ But the EasyMode(tm) method is to just use the following:
      --url=https://github.com/ppbrown/fluxcd-public-demo \
      --branch=main --interval=1m
 
-    flux create kustomization demo-cluster \
+    flux create kustomization demo-app-group \
      --source=GitRepository/ppbrown-demo \
      --path=./clusters/ppbrown-demo \
      --prune=true --interval=1m
