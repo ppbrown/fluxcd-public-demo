@@ -44,6 +44,8 @@ You need to [install the Flux CLI](https://fluxcd.io/flux/installation/#install-
 
 ## 3. Pick your poison
 
+Either of these final install methods should get the demo up and running for you:
+
 * [Simple app path](clusters/ppbrown-demo/README.md)
 * [Helm based deployment](helmbased/README.md)
 
