@@ -55,7 +55,7 @@ Either of these final install methods should get the demo up and running for you
 
 ##  This is not Argo CD
 
-There is no special web server ( By default, anyway. You can choose to add optional web layers though.)
+There is no special web server (By default, anyway. You can choose to add optional web layers though.)
 
 There is no special service port.
 
