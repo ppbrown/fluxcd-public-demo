@@ -1,19 +1,24 @@
 # fluxcd-public-demo
 
-This is repo holds EasyMode(tm) demos for the k8s based [Flux CD Orchestration tool](https://fluxcd.io/)
+This repo holds EasyMode(tm) demos for the k8s based [Flux CD Orchestration tool](https://fluxcd.io/).
+Its target audience is anyone who is new to GitOps, and/or Flux CD.
 
 (If you haven't heard of Flux before, it is superficially similar to Argo CD, in that it enables pure "GitOps" workflows
 to manage workloads in a Kubernetes cluster)
 
 The existing "[Set up Flux for the first time](https://registry.terraform.io/providers/fluxcd/flux/latest)"
-walkthroughs require that you set up github credentials
-with special privs for access. If you already KNOW you want to use Flux, you should follow the standard
+walkthroughs require that you set up github credentials with special privs for access. 
+If you already KNOW you want to use Flux, you should follow the standard
 setup. However, if you aren't sure whether Flux CD suits your style, then this demo is for you.
 
-Following the steps below will let you set up a demo application from a *public* repo of yours.
+Following the steps below will set up a demo application from a *public* repo. (This one, by default).
 Since it is public, it thereby does not require setting up any github access keys. At the same time, it still lets you
 experiment with all the core GitOps principles, where any changes in the repo will get synced to the application(s) running
-in your Kubernetes cluster. In an way, it is similar to running a public helm chart, that you happen to host in your own github repo.
+in your Kubernetes cluster. In an way, it is similar to running a public helm chart.
+
+The demo instructions are written so that you can run the demo directly from this repo right here. That being said, it is very straightforward
+for you to simply clone this repo to your own, and update the urls in the config. Then you will be able to actually make changes to it,
+and see the changes in your own cluster.
 
 # Choose your Adventure
 
