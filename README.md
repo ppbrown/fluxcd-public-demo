@@ -49,6 +49,7 @@ Either of these final install methods should get the demo up and running for you
 * [Simple app path](clusters/ppbrown-demo/README.md)
 * [Helm based deployment](helmbased/README.md)
 
+Once you have it running, changes to your repo will be reflected in the cluster after a small amount of time.
 
 
 # Random notes about Flux CD
