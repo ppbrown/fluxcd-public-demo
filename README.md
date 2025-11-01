@@ -21,8 +21,7 @@ There are now TWO possible demo paths to choose from.
 Flux allows use of "direct" kustomization definitions of apps, or use of Helm charts
 (or even both, but we dont need to go into that here)
 
-This choice may be driven by more than just "Do I like/dislike Helm charts?"
-
+The choice of which style to use may be driven by more than just "Do I like/dislike Helm charts?"
 Base Flux does not give you much in the way of hand-holding. It does not give you deep diagnostics on 
 components that have been deployed (You are expected to use `kubectl`)
 However, if you have deployed helm under flux, you can then use things like
