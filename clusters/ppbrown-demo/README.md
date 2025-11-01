@@ -1,5 +1,5 @@
 # Purpose
-The ppurpose of this directory is to have Flux CD automatically create a k8s Deployment 
+The purpose of this directory is to have Flux CD automatically create a k8s Deployment 
 of nginx, using ClusterIP
 
 This is in the directory path of "clusters/ppbrown-demo", to imply that this
