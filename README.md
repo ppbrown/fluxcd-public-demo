@@ -45,6 +45,8 @@ However, if you have deployed helm under flux, you can then use things like
 
     helm status guestbook --show-resources
 
+You will need to make the choice in step 3, below.
+
 
 # Prerequisites and install steps
 
