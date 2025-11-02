@@ -6,7 +6,7 @@ Its target audience is anyone who is new to GitOps, and/or Flux CD.
 (If you haven't heard of Flux before, it is superficially similar to Argo CD, in that it enables pure "GitOps" workflows
 to manage workloads in a Kubernetes cluster)
 
-The existing "[Set up Flux for the first time](https://registry.terraform.io/providers/fluxcd/flux/latest)"
+The existing "Set up Flux for the first time"
 walkthroughs require that you set up github credentials with special privs for access. 
 If you already KNOW you want to use Flux, you should follow the standard
 setup. However, if you aren't sure whether Flux CD suits your style, then this demo is for you.
