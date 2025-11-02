@@ -17,8 +17,8 @@ experiment with all the core GitOps principles, where any changes in the repo wi
 in your Kubernetes cluster. In an way, it is similar to running a public helm chart.
 
 The demo instructions are written so that you can run the demo directly from this repo right here. That being said, it is very straightforward
-for you to simply clone this repo to your own, and update the urls in the config. Then you will be able to actually make changes to it,
-and see the changes in your own cluster.
+for you to simply clone this repo to your own, and update the urls in the config. Then you will be able to actually make changes to your own repo,
+and see the changes reflectedin your own cluster after a few seconds.
 
 # Choose your Adventure
 
