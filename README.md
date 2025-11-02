@@ -1,5 +1,7 @@
 # fluxcd-public-demo
 
+## Purpose
+
 This repo holds EasyMode(tm) demos for the k8s based [Flux CD Orchestration tool](https://fluxcd.io/).
 Its target audience is anyone who is new to GitOps, and/or Flux CD.
 
@@ -11,18 +13,28 @@ walkthroughs require that you set up github credentials with special privs for a
 If you already KNOW you want to use Flux, you should follow the standard
 setup. However, if you aren't sure whether Flux CD suits your style, then this demo is for you.
 
-Following the steps below will set up a demo application from a *public* repo. (This one, by default).
-Since it is public, it thereby does not require setting up any github access keys. At the same time, it still lets you
-experiment with all the core GitOps principles, where any changes in the repo will get synced to the application(s) running
-in your Kubernetes cluster. In an way, it is similar to running a public helm chart.
+## Source location choice - this repo
 
-The demo instructions are written so that you can run the demo directly from this repo right here. That being said, it is very straightforward
-for you to simply clone this repo to your own, and update the urls in the config. Then you will be able to actually make changes to your own repo,
-and see the changes reflectedin your own cluster after a few seconds.
+The demo instructions are written so that you can run the demo directly from this repo right here. 
+Since it is public, it thereby does not require setting up any github access keys. 
+In an way, it is similar to running a public helm chart. It will set up the demo app for you with a minimum of fuss.
+
+The app should fully come up this way, and you will be able to poke around and see what things look like running under Flux CD.
+You will not be able to make changes in proper gitops style, however, unless you choose to do the setup from a clone of this repo.
+
+## Source location choice - clone to your repo
+
+Alternatively, you can choose to clone this repo to one of your own. If you go this route, you may then make changes to
+your repo after initial deployment, and then any changes in the repo will get synced to the application(s) running
+in your Kubernetes cluster. 
+
+Do note that you will need to keep the clone publically accessible for it to work, unless you go to the extra trouble of setting
+up github access credentials.
 
 # Choose your Adventure
 
-There are now TWO possible demo paths to choose from.
+There are now TWO possible demo paths to choose from. The same app is deployed, but via slightly different framework.
+
 Flux allows use of "direct" kustomization definitions of apps, or use of Helm charts
 (or even both, but we dont need to go into that here)
 
@@ -57,7 +69,7 @@ Either of these final install methods should get the demo up and running for you
 * [Simple app path](clusters/ppbrown-demo/README.md)
 * [Helm based deployment](helmbased/README.md)
 
-Once you have it running, changes to your repo will be reflected in the cluster after a small amount of time.
+Once you have it running, changes to the repo will be automatically reflected in the cluster after a small amount of time.
 
 
 # Random notes about Flux CD
