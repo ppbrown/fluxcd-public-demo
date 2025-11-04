@@ -20,15 +20,15 @@ Since it is public, it thereby does not require setting up any github access key
 In an way, it is similar to running a public helm chart. It will set up the demo app for you with a minimum of fuss.
 
 The app should fully come up this way, and you will be able to poke around and see what things look like running under Flux CD.
-You will not be able to make changes in proper gitops style, however, unless you choose to do the setup from a clone of this repo.
+You will not be able to make changes in proper gitops style, however, unless you choose to do the setup from a fork of this repo.
 
-## Source location choice - clone to your repo
+## Source location choice - fork to your own repo
 
-Alternatively, you can choose to clone this repo to one of your own. If you go this route, you may then make changes to
+Alternatively, you can choose to fork this repo to one of your own. If you go this route, you may then make changes to
 your repo after initial deployment, and then any changes in the repo will get synced to the application(s) running
 in your Kubernetes cluster. 
 
-Do note that you will need to keep the clone publically accessible for it to work, unless you go to the extra trouble of setting
+Do note that you will need to keep the fork publically accessible for it to work, unless you go to the extra trouble of setting
 up github access credentials.
 
 # Choose your Adventure
