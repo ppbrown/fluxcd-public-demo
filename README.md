@@ -67,7 +67,7 @@ It can be a "cluster" of 1 node, for demo purposes, but "kubectl get all" should
 If you only want to install flux to try it out with this demo, you can just do `flux install`.
 
 If you are interested in keeping the service around for more serious uses, you may instead 
-wish to do the full `flux bootstrap github`. However, this requires creating a github access token for the service.
+wish to do the full `flux bootstrap github`. This requires creating a github access token for the service.
 
 ## 3. Pick your poison
 
