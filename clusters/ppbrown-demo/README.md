@@ -37,5 +37,5 @@ Shortly after doing the above, you should then be able to run the diagnostic com
 
 Once this is up, standard k8s commands like `kubectl get svc` will show that the new "nginx-service" is running. And if you want to actually see the output from the webserver on your desktop, then one way is the standard port-forward method
 
-    kubectl  port-forward svc/nginx-service 80
+    kubectl -n demo-app  port-forward svc/nginx-service 80
     # and now run   YourWebbrower http://localhost
