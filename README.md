@@ -5,8 +5,8 @@
 This repo holds EasyMode(tm) demos for the k8s based [Flux CD Orchestration tool](https://fluxcd.io/).
 Its target audience is anyone who is new to GitOps, and/or Flux CD.
 
-(If you haven't heard of Flux before, it enables pure "GitOps" driven workflows
-to manage workloads in a Kubernetes cluster)
+Flux enables pure "GitOps" driven workflows, 
+to manage workloads in a Kubernetes cluster
 
 The existing "Set up Flux for the first time" walkthroughs require that you set up github credentials with special privs for access. 
 If you already KNOW you want to use Flux, you should follow the standard setup. 
