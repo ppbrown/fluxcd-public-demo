@@ -11,8 +11,10 @@ references in Flux instead.
 
 # 0. Prerequisites
 
-As mentioned in the top level [README.md](/README.md), you need to first have
-a working kubernetes cluster, and have the "flux" CLI tool installed.
+As mentioned in the top level [README.md](/README.md), you first need
+* A working kubernetes cluster
+* The ["flux" CLI tool installed](https://fluxcd.io/flux/installation/#install-the-flux-cli).
+* `flux bootstrap`
 
 ## 1. Define this github repo as a known source
 
