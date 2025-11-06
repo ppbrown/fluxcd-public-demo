@@ -22,7 +22,7 @@ As mentioned in the top level [README.md](/README.md), you first need
 
 ## 2. Define this app as a tracked entity to Flux
 
-    flux create kustomization demo-app-group --source=GitRepository/ppbrown-demo  --path=./clusters/ppbrown-demo --prune=true --interval=1m
+    flux create kustomization demo-app --source=GitRepository/ppbrown-demo  --path=./clusters/ppbrown-demo --prune=true --interval=1m
 
 Normally, you would also need to set up github tokens, but this is a PUBLIC repo, so you dont have to do that.
 
@@ -33,7 +33,7 @@ Shortly after doing the above, you should then be able to run the diagnostic com
     $ flux get kustomizations
 
     NAME            REVISION                SUSPENDED       READY   MESSAGE
-    demo-cluster    main@sha1:xyzabc      False           True    Applied revision: main@sha1:xyzabc....
+    demo-app    main@sha1:xyzabc      False           True    Applied revision: main@sha1:xyzabc....
 
 Once this is up, standard k8s commands like `kubectl get svc` will show that the new "nginx-service" is running. And if you want to actually see the output from the webserver on your desktop, then one way is the standard port-forward method
 
