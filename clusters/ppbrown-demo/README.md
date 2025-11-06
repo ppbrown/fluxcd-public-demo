@@ -18,9 +18,7 @@ As mentioned in the top level [README.md](/README.md), you first need
 
 ## 1. Define this github repo as a known source
 
-    flux create source git ppbrown-demo \
-     --url=https://github.com/ppbrown/fluxcd-public-demo \
-     --branch=main --interval=1m
+    flux create source git ppbrown-demo --url=https://github.com/ppbrown/fluxcd-public-demo --branch=main
 
 ## 2. Define this app as a tracked entity to Flux
 
