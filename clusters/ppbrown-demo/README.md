@@ -14,7 +14,7 @@ references in Flux instead.
 As mentioned in the top level [README.md](/README.md), you first need
 * A working kubernetes cluster
 * The ["flux" CLI tool installed](https://fluxcd.io/flux/installation/#install-the-flux-cli).
-* `flux bootstrap`
+* `flux install`
 
 ## 1. Define this github repo as a known source
 
