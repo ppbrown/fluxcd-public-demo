@@ -5,24 +5,17 @@
 This repo holds EasyMode(tm) demos for the k8s based [Flux CD Orchestration tool](https://fluxcd.io/).
 Its target audience is anyone who is new to GitOps, and/or Flux CD.
 
-(If you haven't heard of Flux before, it is superficially similar to Argo CD, in that it enables pure "GitOps" workflows
+(If you haven't heard of Flux before, it enables pure "GitOps" driven workflows
 to manage workloads in a Kubernetes cluster)
 
-The existing "Set up Flux for the first time"
-walkthroughs require that you set up github credentials with special privs for access. 
-If you already KNOW you want to use Flux, you should follow the standard
-setup. However, if you aren't sure whether Flux CD suits your style, then this demo is for you.
+The existing "Set up Flux for the first time" walkthroughs require that you set up github credentials with special privs for access. 
+If you already KNOW you want to use Flux, you should follow the standard setup. 
+However, if you aren't sure whether Flux CD is worth the hassle yet, then this demo is for you.
 
-## Source location choice - this repo
+## This repo vs your own
 
 The demo instructions are written so that you can run the demo directly from this repo right here. 
 Since it is public, it thereby does not require setting up any github access keys. 
-In an way, it is similar to running a public helm chart. It will set up the demo app for you with a minimum of fuss.
-
-The app should fully come up this way, and you will be able to poke around and see what things look like running under Flux CD.
-You will not be able to make changes in proper gitops style, however, unless you choose to do the setup from a fork of this repo.
-
-## Source location choice - fork to your own repo
 
 Alternatively, you can choose to fork this repo to one of your own. If you go this route, you may then make changes to
 your repo after initial deployment, and then any changes in the repo will get synced to the application(s) running
