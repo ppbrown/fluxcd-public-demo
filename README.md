@@ -33,19 +33,17 @@ up github access credentials.
 
 # Choose your Adventure
 
-There are now TWO possible demo paths to choose from. The same app is deployed, but via slightly different framework.
-
-Flux allows use of "direct" kustomization definitions of apps, or use of Helm charts
+There are TWO possible demo paths to choose from. Flux allows use of "direct" kustomization definitions of apps, or use of Helm charts
 (or even a mix of both)
 
 The choice of which style to use may be driven by more than just "Do I like/dislike Helm charts?"
 Base Flux does not give you much in the way of hand-holding. It does not give you deep diagnostics on 
 components that have been deployed (You are expected to use `kubectl` for that).
-However, if you have deployed helm under flux, you can then use things like
+However, if you have deployed helm under flux, you can use helm for additional visibility. eg
 
     helm status guestbook --show-resources
 
-You will need to make the choice in step 3, below.
+You will need to choose between kustomize, or helm, in step 3 below.
 
 
 # Prerequisites and install steps
@@ -57,19 +55,23 @@ If that makes you uncomfortable, /This is not the guide you are looking for/
 
 ## 1. Have a working k8s cluster
 
-Make sure that you need to already have "kubectl" installed, and talking to your functioning k8s cluster as admin.
-It can be a "cluster" of 1 node, for demo purposes. But "kubectl get all" should actually do something useful.
+Make sure that you already have "kubectl" installed, and talking to your functioning k8s cluster as admin.
+It can be a "cluster" of 1 node, for demo purposes, but "kubectl get all" should actually do something useful.
 
 ## 2. Install the flux CLI and service
 
-You need to [download the Flux CLI](https://fluxcd.io/flux/installation/#install-the-flux-cli) by hand, and also do
-`flux install` one time, to install flux inside your k8s cluster.
+* First, [download the Flux CLI](https://fluxcd.io/flux/installation/#install-the-flux-cli) by hand
 
-(Alternatively, you may do the full `flux bootstrap github` if you dont mind giving it a github access token)
+* Next, use it to install the Flux service in the cluster.
+
+If you only want to install flux to try it out with this demo, you can just do `flux install`.
+
+If you are interested in keeping the service around for more serious uses, you may instead 
+wish to do the full `flux bootstrap github`. However, this requires creating a github access token for the service.
 
 ## 3. Pick your poison
 
-Either of these final install methods should get a demo up and running for you:
+Either of these final install methods should get a demo app up and running for you:
 
 * [Simple app path](clusters/ppbrown-demo/README.md)
 * [Helm based deployment](helmbased/README.md)
@@ -78,17 +80,20 @@ Once you have it running, changes to the repo will be automatically reflected in
 
 Technically, each of them install different apps, so you can actually do both.
 
+---
+
+---
+
 # Random notes about Flux CD
 
 ##  This is not Argo CD
 
-There is no special web server (By default, anyway. You can choose to add optional web layers though.)
+There is no special web server that gives you an admin GUI (By default, anyway. You can choose to add optional web layers though.)
 
-There is no special service port.
+There is no special service port. The flux CLI communicates with the backend using native kubernetes API 
+calls, so there's no extra holes in your firewalls to make.
 
-The flux CLI communicates with the backend using native kubernetes API calls. So there's no extra holes in your firewalls to make.
-
-## Removal
+## Removing Flux
 
 To undo all the things flux did in your cluster, first run `flux delete kustomization` on all the things shown by
 `flux get kustomizations`. 
