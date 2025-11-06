@@ -24,10 +24,7 @@ As mentioned in the top level [README.md](/README.md), you first need
 
 ## 2. Define this app as a tracked entity to Flux
 
-    flux create kustomization demo-app-group \
-     --source=GitRepository/ppbrown-demo \
-     --path=./clusters/ppbrown-demo \
-     --prune=true --interval=1m
+    flux create kustomization demo-app-group --source=GitRepository/ppbrown-demo  --path=./clusters/ppbrown-demo --prune=true --interval=1m
 
 Normally, you would also need to set up github tokens, but this is a PUBLIC repo, so you dont have to do that.
 
