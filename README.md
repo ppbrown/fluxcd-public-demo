@@ -10,7 +10,9 @@ to manage workloads in a Kubernetes cluster
 
 The existing "Set up Flux for the first time" walkthroughs require that you set up github credentials with special privs for access. 
 If you already KNOW you want to use Flux, you should follow the standard setup. 
-However, if you aren't sure whether Flux CD is worth the hassle yet, then this demo is for you.
+
+However, if you aren't sure whether Flux CD is worth the hassle yet, then this demo lets you skip that. With just a few commands from your workstation, you will
+be up and running with a Flux-managed demo application in your Kubernetes cluster.
 
 ## This repo vs your own
 
@@ -59,8 +61,8 @@ It can be a "cluster" of 1 node, for demo purposes, but "kubectl get all" should
 
 If you only want to install flux to try it out with this demo, you can just do `flux install`.
 
-If you are interested in keeping the service around for more serious uses, you may instead 
-wish to do the full `flux bootstrap github`. This requires creating a github access token for the service.
+If you are interested in keeping the service around for more serious use, `flux bootstrap github` may be more appropriate for you.
+This requires creating a github access token for the service.
 
 ## 3. Pick your poison
 
@@ -83,7 +85,7 @@ You are now all set up! Poke around, and see how you feel about Flux CD.
 
 ##  This is not Argo CD
 
-There is no special web server that gives you an admin GUI (By default, anyway. You can choose to add optional web layers though.)
+There is no special web server that gives you an admin GUI (By default, anyway. You can choose to install an optional third-party web admin GUI though.)
 
 There is no special service port. The flux CLI communicates with the backend using native kubernetes API 
 calls, so there's no extra holes in your firewalls to make.
