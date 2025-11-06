@@ -39,3 +39,8 @@ The diagnostic command below should eventually show you something like the follo
 
     NAME            REVISION                SUSPENDED       READY   MESSAGE
     demo-cluster    main@sha1:xyzabc      False           True    Applied revision: main@sha1:xyzabc....
+
+You will then be able to do things like `kubectl get svc` to show that the new "nginx-service" is running. And if you want to actually see the output from the webserver on your desktop, then one way is the standard:
+
+    kubectl  port-forward svc/nginx-service 80
+    # and now run   YourWebbrower http://localhost
