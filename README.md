@@ -73,6 +73,8 @@ Once you have it running, changes to the repo will be automatically reflected in
 
 Technically, each of them install different apps, so you can actually do both.
 
+You are now all set up! Poke around, and see how you feel about Flux CD.
+
 ---
 
 ---
