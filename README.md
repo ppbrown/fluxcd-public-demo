@@ -87,3 +87,9 @@ There is no special service port.
 
 The flux CLI communicates with the backend using native kubernetes API calls. So there's no extra holes in your firewalls to make.
 
+## Removal
+
+To undo all the things flux did in your cluster, first run `flux delete kustomization` on all the things shown by
+`flux get kustomizations`. 
+
+You are then clear to simply run `flux uninstall`
