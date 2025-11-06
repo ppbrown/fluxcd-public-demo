@@ -62,8 +62,10 @@ It can be a "cluster" of 1 node, for demo purposes. But "kubectl get all" should
 
 ## 2. Install the flux CLI
 
-You need to [install the Flux CLI](https://fluxcd.io/flux/installation/#install-the-flux-cli) by hand, and also follow
-the directions there for first-time "bootstrap" of flux.
+You need to [install the Flux CLI](https://fluxcd.io/flux/installation/#install-the-flux-cli) by hand, and also do
+`flux install` one time, to install flux inside your k8s cluster.
+
+(or, you may do the full flux bootstrap github` if you dont mind giving it a github token)
 
 ## 3. Pick your poison
 
