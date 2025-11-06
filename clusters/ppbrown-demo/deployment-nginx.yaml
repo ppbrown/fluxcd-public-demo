@@ -20,13 +20,13 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
-          volumeMounts:
-            - name: web
-              mountPath: /usr/share/nginx/html
-      volumes:
+        volumeMounts:
         - name: web
-          configMap:
-            name: demo-app-index
-            items:
-              - key: index.html
-                path: index.html
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: web
+        configMap:
+          name: demo-app-index
+          items:
+          - key: index.html
+            path: index.html
