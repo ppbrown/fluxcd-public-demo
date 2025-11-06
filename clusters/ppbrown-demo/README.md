@@ -33,14 +33,14 @@ Normally, you would also need to set up github tokens, but this is a PUBLIC repo
 
 ## 3. ... Profit!
 
-The diagnostic command below should eventually show you something like the following:
+Shortly after doing the above, you should then be able to run the diagnostic command below to verify service
 
     $ flux get kustomizations
 
     NAME            REVISION                SUSPENDED       READY   MESSAGE
     demo-cluster    main@sha1:xyzabc      False           True    Applied revision: main@sha1:xyzabc....
 
-You will then be able to do things like `kubectl get svc` to show that the new "nginx-service" is running. And if you want to actually see the output from the webserver on your desktop, then one way is the standard:
+Once this is up, standard k8s commands like `kubectl get svc` will show that the new "nginx-service" is running. And if you want to actually see the output from the webserver on your desktop, then one way is the standard port-forward method
 
     kubectl  port-forward svc/nginx-service 80
     # and now run   YourWebbrower http://localhost
