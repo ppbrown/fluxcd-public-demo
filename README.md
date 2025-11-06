@@ -81,16 +81,16 @@ You are now all set up! Poke around, and see how you feel about Flux CD.
 
 ---
 
-# Random notes about Flux CD
+## Random notes about Flux CD
 
-##  This is not Argo CD
+###  This is not Argo CD
 
 There is no special web server that gives you an admin GUI (By default, anyway. You can choose to install an optional third-party web admin GUI though.)
 
 There is no special service port. The flux CLI communicates with the backend using native kubernetes API 
 calls, so there's no extra holes in your firewalls to make.
 
-## Removing Flux
+### Removing Flux
 
 To undo all the things flux did in your cluster, first run `flux delete kustomization` on all the things shown by
 `flux get kustomizations`. 
