@@ -62,7 +62,8 @@ It can be a "cluster" of 1 node, for demo purposes. But "kubectl get all" should
 
 ## 2. Install the flux CLI
 
-You need to [install the Flux CLI](https://fluxcd.io/flux/installation/#install-the-flux-cli) by hand.
+You need to [install the Flux CLI](https://fluxcd.io/flux/installation/#install-the-flux-cli) by hand, and also follow
+the directions there for first-time "bootstrap" of flux.
 
 ## 3. Pick your poison
 
