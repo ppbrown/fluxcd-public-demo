@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: demo-app-index
+  namespace: default
 data:
   index.html: |
     Started by Flux CD
