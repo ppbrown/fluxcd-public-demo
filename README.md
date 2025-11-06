@@ -36,7 +36,7 @@ up github access credentials.
 There are now TWO possible demo paths to choose from. The same app is deployed, but via slightly different framework.
 
 Flux allows use of "direct" kustomization definitions of apps, or use of Helm charts
-(or even both, but we dont need to go into that here)
+(or even a mix of both)
 
 The choice of which style to use may be driven by more than just "Do I like/dislike Helm charts?"
 Base Flux does not give you much in the way of hand-holding. It does not give you deep diagnostics on 
@@ -69,13 +69,14 @@ You need to [download the Flux CLI](https://fluxcd.io/flux/installation/#install
 
 ## 3. Pick your poison
 
-Either of these final install methods should get the demo up and running for you:
+Either of these final install methods should get a demo up and running for you:
 
 * [Simple app path](clusters/ppbrown-demo/README.md)
 * [Helm based deployment](helmbased/README.md)
 
 Once you have it running, changes to the repo will be automatically reflected in the cluster after a small amount of time.
 
+Technically, each of them install different apps, so you can actually do both.
 
 # Random notes about Flux CD
 
