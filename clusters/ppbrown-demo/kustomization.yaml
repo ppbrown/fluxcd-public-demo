@@ -1,6 +1,11 @@
+# Strictly speaking, this file is not required.
+# If not present, FluxCD should autogenerate one and
+# automatically read all .yaml files in the directory
+
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: default
 resources:
   - deployment-nginx.yaml
   - service-nginx.yaml
+  - cm-index.yaml
