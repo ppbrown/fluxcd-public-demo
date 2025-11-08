@@ -7,5 +7,5 @@ data:
   index.html: |
     <title> Flux CD demo</title> 
     Started by Flux CD. <p> 
-    special val = ${FLUX_var1:=standard}
+    Special env val = ${FLUX_ENV_NAME}
     

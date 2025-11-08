@@ -11,4 +11,3 @@ resources:
   - deployment-nginx.yaml
   - namespace.yaml
   - service-nginx.yaml
-aaa
