@@ -4,8 +4,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../base
-patchStrateticMerge:
-  - patch-ca-flux-env.yaml
+patches:
+  - path: patch-cm-flux-env.yaml
+    target:
+      kind: ConfigMap
+      name: flux-env
 #
 # optional
 #nameSuffix: -dev

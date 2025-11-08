@@ -9,7 +9,9 @@ Reguardless, to use this one instead of the regular, you can do
     flux install
 
     flux create source git ppbrown-demo --url=https://github.com/ppbrown/fluxcd-public-demo --branch=main
-    flux create kustomization demo-app --source=GitRepository/ppbrown-demo  --path=./clusters/ppbrown-demo --prune=true --interval=1m
+    kubectl apply -k .
+    ## OBSOLETE
+    ## flux create kustomization demo-app --source=GitRepository/ppbrown-demo  --path=./clusters/ppbrown-demo --prune=true --interval=1m
 
 Then, when things are reconciled, and the demo webserver is set up, you can see that the webserver serves the QA contents,
 rather than the default one from the ppbrown-demo directory.
