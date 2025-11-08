@@ -8,13 +8,21 @@ Its target audience is anyone who is new to GitOps, and/or Flux CD.
 Flux enables pure "GitOps" driven workflows, 
 to manage workloads in a Kubernetes cluster
 
+# Quickstart guide
+
+For the impatient, hope over to the [Quickstart Guide](QUICKSTART.md) and have something running in less than 5 minutes
+
+---
+
+# Details
+
 The existing "Set up Flux for the first time" walkthroughs require that you set up github credentials with special privs for access. 
 If you already KNOW you want to use Flux, you should follow the standard setup. 
 
 However, if you aren't sure whether Flux CD is worth the hassle yet, then this demo lets you skip that. With just a few commands from your workstation, you will
 be up and running with a Flux-managed demo application in your Kubernetes cluster.
 
-## This repo vs your own
+## Run from this repo, or your own
 
 The demo instructions are written so that you can run the demo directly from this repo right here. 
 Since it is public, it thereby does not require setting up any github access keys. 
@@ -26,19 +34,6 @@ in your Kubernetes cluster.
 Do note that you will need to keep the fork publically accessible for it to work, unless you go to the extra trouble of setting
 up github access credentials.
 
-# Choose your Adventure
-
-There are TWO possible demo paths to choose from. Flux allows use of "direct" kustomization definitions of apps, or use of Helm charts
-(or even a mix of both)
-
-The choice of which style to use may be driven by more than just "Do I like/dislike Helm charts?"
-Base Flux does not give you much in the way of hand-holding. It does not give you deep diagnostics on 
-components that have been deployed (You are expected to use `kubectl` for that).
-However, if you have deployed helm under flux, you can use helm for additional visibility. eg
-
-    helm status guestbook --show-resources
-
-You will need to choose between kustomize, or helm, in step 3 below.
 
 
 # Prerequisites and install steps
@@ -64,12 +59,21 @@ If you only want to install flux to try it out with this demo, you can just do `
 If you are interested in keeping the service around for more serious use, `flux bootstrap github` may be more appropriate for you.
 This requires creating a github access token for the service.
 
-## 3. Pick your poison
+## 3. Choose your Adventure
 
-Either of these final install methods should get a demo app up and running for you:
+There are TWO possible demo paths to choose from. Flux allows use of "direct" kustomization definitions of apps, or use of Helm charts
+(or even a mix of both)
 
-* [Simple app path](clusters/ppbrown-demo/README.md)
-* [Helm based deployment](helmbased/README.md)
+The choice of which style to use may be driven by more than just "Do I like/dislike Helm charts?"
+Base Flux does not give you much in the way of hand-holding. It does not give you deep diagnostics on 
+components that have been deployed (You are expected to use `kubectl` for that).
+However, if you have deployed helm under flux, you can use helm for additional visibility. eg
+
+    helm status guestbook --show-resources
+
+* If you still would prefer to keep things simple for now, go with the [Simple app path](clusters/ppbrown-demo/README.md) (or just the  [Quickstart Guide](QUICKSTART.md) )
+
+* Alternatively, you can choose the [Helm based deployment](helmbased/README.md)
 
 Once you have it running, changes to the repo will be automatically reflected in the cluster after a small amount of time.
 
