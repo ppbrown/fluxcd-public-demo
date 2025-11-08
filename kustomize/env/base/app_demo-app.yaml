@@ -1,0 +1,21 @@
+
+# Create one of these files for every separate app 
+# that you want flux to manage
+
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: demo-app
+  namespace: flux-system
+spec:
+  interval: 1m
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: ppbrown-demo
+  path: ./kustomize/apps/demo-app    # needs to be relative to top
+  # omit targetNamespace; already set higher up
+  postBuild:
+    substituteFrom:
+            - kind: ConfigMap
+              name: flux-env

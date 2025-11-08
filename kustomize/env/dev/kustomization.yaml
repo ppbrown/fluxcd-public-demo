@@ -1,13 +1,12 @@
 # pull in the "base" app, but then allow us
 # to override certain things for QA environment
-
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../ppbrown-demo
-patches:
-  - path: cm-index.yaml
-    target:
-      kind: ConfigMap
-      name: demo-app-index
+  - ../base
+patchStrateticMerge:
+  - patch-ca-flux-env.yaml
+#
+# optional
+#nameSuffix: -dev
 

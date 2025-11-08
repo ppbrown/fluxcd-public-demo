@@ -1,0 +1,9 @@
+# This file is to set values that are true for ALL apps in the cluster.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flux-env
+  namespace: flux-system
+data:
+  FLUX_ENV_NAME: "BASE-DO-NOT-USE"
+  # add more env-wide keys here

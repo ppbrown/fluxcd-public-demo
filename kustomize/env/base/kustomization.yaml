@@ -1,0 +1,11 @@
+# pull in the "base" app, but then allow us
+# to override certain things for QA environment
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - namespace.yaml
+  - cm-flux-env.yaml
+  - app_demo-app.yaml
+  # Add more app_... files as desired
+

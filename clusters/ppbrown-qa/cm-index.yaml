@@ -1,9 +1,0 @@
-# Override the default index file, for QA
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: demo-app-index
-  namespace: demo-app
-data:
-  index.html: |
-    Started by Flux CD for QA ENVIRONMENT
