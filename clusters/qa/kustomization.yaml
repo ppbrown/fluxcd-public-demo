@@ -1,0 +1,9 @@
+# Strictly speaking, this file is not required.
+# If "kustomization.yaml" is not present, FluxCD should autogenerate one and
+# automatically read all .yaml files in the directory
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../pbrown-demo
+  - cm-index.yaml
