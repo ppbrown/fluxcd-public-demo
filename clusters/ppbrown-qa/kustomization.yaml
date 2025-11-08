@@ -5,4 +5,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../ppbrown-demo
-  - cm-index.yaml
+patches:
+  - path: cm-index.yaml
+    target:
+      kind: ConfigMap
+      name: demo-app-index
+
