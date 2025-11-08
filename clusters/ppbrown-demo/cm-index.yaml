@@ -5,5 +5,7 @@ metadata:
   namespace: demo-app
 data:
   index.html: |
-    <title> Flux CD demo</title> Started by Flux CD. <p> special val = $(FLUX_var1:=standard)
+    <title> Flux CD demo</title> 
+    Started by Flux CD. <p> 
+    special val = ${FLUX_var1:=standard}
     
