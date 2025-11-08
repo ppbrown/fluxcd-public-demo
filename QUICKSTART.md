@@ -9,7 +9,7 @@ Minimal explanation, minimal documentation, just
 
     flux install
     
-    flux create source git ppbrown-demo --url=https://github.com/ppbrown/fluxcd-public-demo --tag=v1.0
+    flux create source git ppbrown-demo --url=https://github.com/ppbrown/fluxcd-public-demo --branch=v1.0-branch
     flux create kustomization demo-app --source=GitRepository/ppbrown-demo  --path=./clusters/ppbrown-demo --prune=true --interval=1m
 
 In 60-120 seconds, you should now have a tiny deployment running in the `demo-app` namespace.
@@ -19,6 +19,6 @@ Poke around with the usual kubernetes tools of your choice, and/or view the demo
     # and in a different terminal/browser, peek at http://localhost
 
 If you fork this repo to your own (which I encourage, to get full use out of Flux!), dont forget to change `github.com/ppbrown/` to your own repo,
-and update --tag or --branch as appropriate
+and update --branch as appropriate
 
 For a more in-depth view of things, go back to the [README](README.md)
