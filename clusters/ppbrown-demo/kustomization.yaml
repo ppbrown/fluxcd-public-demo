@@ -1,0 +1,15 @@
+
+# If this were a standalone directory, this file would not actually be needed.
+# FluxCD should autogenerate one and
+# automatically read all .yaml files in the directory
+# However, we also use this dir as a template for other ones, so now it is required.
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: demo-app
+resources:
+  - cm-index.yaml
+  - deployment-nginx.yaml
+  - namespace.yaml
+  - service-nginx.yaml
+
