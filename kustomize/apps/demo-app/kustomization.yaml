@@ -9,5 +9,4 @@ kind: Kustomization
 resources:
   - cm-index.yaml
   - deployment-nginx.yaml
-  - namespace.yaml
   - service-nginx.yaml
