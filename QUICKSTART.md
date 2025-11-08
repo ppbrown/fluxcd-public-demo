@@ -18,5 +18,6 @@ Poke around with the usual kubernetes tools of your choice, and/or view the demo
     kubectl -n demo-app  port-forward svc/nginx-service 80
     # and in a different terminal/browser, peek at http://localhost
 
+If you fork this repo to your own (which I encourage, to get full use out of Flux!), dont forget to change `github.com/ppbrown/` to your own repo.
 
 For a more in-depth view of things, go back to the [README](README.md)
