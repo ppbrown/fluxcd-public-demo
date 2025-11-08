@@ -13,7 +13,7 @@ Minimal explanation, minimal documentation, just
     flux create kustomization demo-app --source=GitRepository/ppbrown-demo  --path=./clusters/ppbrown-demo --prune=true --interval=1m
 
 In 60-120 seconds, you should now have a tiny deployment running in the `demo-app` namespace.
-Poke around with the usual kubernetes tools of your choice, and or view the demo output, with
+Poke around with the usual kubernetes tools of your choice, and/or view the demo output, with
 
     kubectl -n demo-app  port-forward svc/nginx-service 80
     # and in a different terminal/browser, peek at http://localhost
