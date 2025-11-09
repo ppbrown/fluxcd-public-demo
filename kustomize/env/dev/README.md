@@ -21,7 +21,7 @@ If you have taken care of all of the above, then all you have left to do is:
 
 
 Once things are reconciled, and the demo webserver is set up, you can see that the webserver
-serves the DEV contents, rather than the default one from the ppbrown-demo directory.
+serves the DEV contents, rather than the default one from the apps/demo-app directory.
 
     Started by Flux CD.
     Special env val = DEV
