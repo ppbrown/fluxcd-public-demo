@@ -26,7 +26,8 @@ serves the QA contents, rather than the default one from the ppbrown-demo direct
     Started by Flux CD.
     Special env val = QA
 
-It would show "PROD" if you started things from ../prod, and "QA" if from ../qa
+It would show "PROD" if you started things from [../prod](../prod), 
+and "DEV" if from [../qa](../qa)
 
 NOTE, however, that it uses the same namespace. So you must not try to run both `DEV` and 
 `PROD` at the same time, for example.

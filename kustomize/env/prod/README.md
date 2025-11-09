@@ -26,7 +26,7 @@ serves the PROD contents, rather than the default one from the ppbrown-demo dire
     Started by Flux CD.
     Special env val = PROD
 
-It would show "PROD" if you started things from ../prod, and "QA" if from ../qa
+It would show "DEV" if you started things from [../dev](../dev), and "QA" if from [../qa](../qa)
 
 NOTE, however, that it uses the same namespace. So you must not try to run both `DEV` and 
 `PROD` at the same time, for example.
