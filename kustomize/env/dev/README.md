@@ -9,7 +9,7 @@ If you are starting from ground zero, and your own k8s cluster, you can activate
 with the following steps
 
 1. Have a working k8s cluster
-2. Install the flux CLI
+2. Install the flux CLI ( `curl -s https://fluxcd.io/install.sh | sudo bash` )
 3. Run `flux install`
 4. Clone this repo, and cd to this directory
 5. Ensure [../base/repo.yaml](../base/repo.yaml) has up-to-date information
