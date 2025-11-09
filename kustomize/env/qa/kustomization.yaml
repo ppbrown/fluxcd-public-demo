@@ -1,0 +1,15 @@
+# pull in the "base" app, but then allow us
+# to override certain things for QA environment
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../base
+patches:
+  - path: patch-cm-flux-env.yaml
+    target:
+      kind: ConfigMap
+      name: flux-env
+#
+# optional
+#nameSuffix: -dev
+

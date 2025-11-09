@@ -8,18 +8,23 @@ Its target audience is anyone who is new to GitOps, and/or Flux CD.
 Flux enables pure "GitOps" driven workflows, 
 to manage workloads in a Kubernetes cluster
 
+(Update: it now also showcases [kustomize/env/dev](a fancier quick setup for dev/qa/prod)! )
+
 # Quickstart guide
 
-For the impatient, hope over to the [Quickstart Guide](QUICKSTART.md) and have something running in less than 5 minutes
+For the impatient, hope over to the [Quickstart Guide](QUICKSTART.md) and have something
+running in less than 5 minutes
 
 ---
 
 # Details
 
-The existing "Set up Flux for the first time" walkthroughs require that you set up github credentials with special privs for access. 
+The existing "Set up Flux for the first time" walkthroughs require that you set up github
+credentials with special privs for access. 
 If you already KNOW you want to use Flux, you should follow the standard setup. 
 
-However, if you aren't sure whether Flux CD is worth the hassle yet, then this demo lets you skip that. With just a few commands from your workstation, you will
+However, if you aren't sure whether Flux CD is worth the hassle yet, then this demo lets you
+skip that. With just a few commands from your workstation, you will
 be up and running with a Flux-managed demo application in your Kubernetes cluster.
 
 ## Run from this repo, or your own
