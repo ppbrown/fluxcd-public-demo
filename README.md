@@ -8,12 +8,14 @@ Its target audience is anyone who is new to GitOps, and/or Flux CD.
 Flux enables pure "GitOps" driven workflows, 
 to manage workloads in a Kubernetes cluster
 
-Update: it now also showcases [a fancier quick setup for dev/qa/prod!](kustomize/env/dev)
-
 # Quickstart guide
 
 For the impatient, hope over to the [Quickstart Guide](QUICKSTART.md) and have something
 running in less than 5 minutes
+
+
+Update: there is now also [a fancier quick setup for dev/qa/prod!](kustomize/env/dev)
+
 
 ---
 
