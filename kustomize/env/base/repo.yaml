@@ -8,5 +8,5 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: restructure
+    branch: main
   url: https://github.com/ppbrown/fluxcd-public-demo

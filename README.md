@@ -71,11 +71,13 @@ However, if you have deployed helm under flux, you can use helm for additional v
 
     helm status guestbook --show-resources
 
-* If you still would prefer to keep things simple for now, go with the [Simple app path](clusters/ppbrown-demo/README.md) (or just the  [Quickstart Guide](QUICKSTART.md) )
+* If you still would prefer to keep things simple for now, go with the 
+[Simple app path](kustomize/apps/demo-app/README.md) (or just the  [Quickstart Guide](QUICKSTART.md) )
 
 * Alternatively, you can choose the [Helm based deployment](helmbased/README.md)
 
-Once you have it running, changes to the repo will be automatically reflected in the cluster after a small amount of time.
+Once you have it running, changes to the repo will be automatically reflected in the cluster 
+after a small amount of time.
 
 Technically, each of them install different apps, so you can actually do both.
 
