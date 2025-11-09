@@ -5,5 +5,5 @@ metadata:
   name: flux-env
   namespace: flux-system
 data:
-  FLUX_ENV_NAME: "DEV2"
+  FLUX_ENV_NAME: "DEV"
   # add more env-wide keys here
