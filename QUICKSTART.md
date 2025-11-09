@@ -21,12 +21,13 @@ Poke around with the usual kubernetes tools of your choice, and/or view the demo
 You may notice that the output looks a little strange. It has `${FLUX_ENV_NAME}`
 
 This is because this demo has two ways to run. You picked the quick-and-simple way.
-But if you want to see the proper enterprise way of doing things, do a `flux uninstall` and
+But if you want to see the proper enterprise way of doing things, do 
+`flux delete kustomization demo-app; flux uninstall` and
 start again from [kustomize/env/dev](kustomize/env/dev)
 
 
 If you fork this repo to your own (which I encourage, to get full use out of Flux!), 
 dont forget to change all references of `github.com/ppbrown/` to your own repo,
-and update --branch as appropriate
+and update --branch if appropriate
 
 For a more in-depth view of things, go back to the [README](README.md)
