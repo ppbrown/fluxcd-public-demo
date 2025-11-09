@@ -1,0 +1,12 @@
+# This file is to set values that are true for ALL apps in the cluster.
+# Note: These are STATIC VALUES (because ns=flux-system)
+# If you change a value here, you would have to fully restart everything
+# for the new value to be seen
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flux-env
+  namespace: flux-system
+data:
+  FLUX_ENV_NAME: "BASE-DO-NOT-USE"
+  # add more env-wide keys here

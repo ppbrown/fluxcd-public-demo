@@ -18,11 +18,11 @@ As mentioned in the top level [README.md](/README.md), you first need
 
 ## 1. Define this github repo as a known source
 
-    flux create source git ppbrown-demo --url=https://github.com/ppbrown/fluxcd-public-demo --branch=v1.0-branch
+    flux create source git demo-app --url=https://github.com/ppbrown/fluxcd-public-demo --branch=main
 
 ## 2. Define this app as a tracked entity to Flux
 
-    flux create kustomization demo-app --source=GitRepository/ppbrown-demo  --path=./clusters/ppbrown-demo --prune=true --interval=1m
+    flux create kustomization demo-app --source=GitRepository/ppbrown-demo  --path=./kustomize/apps/demo-app --prune=true --interval=1m
 
 Normally, you would also need to set up github tokens, but this is a PUBLIC repo, so you dont have to do that.
 
@@ -39,3 +39,10 @@ Once this is up, standard k8s commands like `kubectl get svc` will show that the
 
     kubectl -n demo-app  port-forward svc/nginx-service 80
     # and now run   YourWebbrower http://localhost
+
+
+You may notice that the output looks a little strange. It has `${FLUX_ENV_NAME}`.
+
+This is because this directory has two ways to run. You picked the quick-and-simple way.
+But if you want to see the proper enterprise way of doing things, do a `flux uninstall` and
+start again from [../../env/dev](../../env/dev)

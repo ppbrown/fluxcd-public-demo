@@ -1,0 +1,12 @@
+# It is a little ugly to do this here,
+# but it makes the setup shorter
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: demo-app
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/ppbrown/fluxcd-public-demo

@@ -1,4 +1,3 @@
-# Override the default index file, for QA
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -6,4 +5,7 @@ metadata:
   namespace: demo-app
 data:
   index.html: |
-    Started by Flux CD for QA ENVIRONMENT
+    <title> Flux CD demo</title> 
+    Started by Flux CD. <p> 
+    Special env val = ${FLUX_ENV_NAME}
+    
