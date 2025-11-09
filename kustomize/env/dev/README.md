@@ -8,27 +8,27 @@ It tweaks a few minimal things before invoking whatever is defined there.
 If you are starting from ground zero, and your own k8s cluster, you can activate this demo
 with the following steps
 
-1. You have a working k8s cluster
-2. You have already installed the flux CLI
-3. You have already run `flux install`
-4. You have cloned this repo, and are sitting in this directory
-5. [../base/repo.yaml](../base/repo.yaml) has up-to-date information
+1. Have a working k8s cluster
+2. Install the flux CLI
+3. Run `flux install`
+4. Clone this repo, and cd to this directory
+5. Ensure [../base/repo.yaml](../base/repo.yaml) has up-to-date information
 
-If you have taken care of all of the above, then all you have left is:
+If you have taken care of all of the above, then all you have left to do is:
 
     kubectl apply -k .
 
 
 
-When things are reconciled, and the demo webserver is set up, you can see that the webserver
+Once things are reconciled, and the demo webserver is set up, you can see that the webserver
 serves the DEV contents, rather than the default one from the ppbrown-demo directory.
 
     Started by Flux CD for DEV ENVIRONMENT
 
 It would show "PROD" if you started things from ../prod, and "QA" if from ../qa
 
-NOTE, however, that it uses the same namespace. So you must not try to run both DEV` and 
-`PROD` at the same time.
+NOTE, however, that it uses the same namespace. So you must not try to run both `DEV` and 
+`PROD` at the same time, for example.
 
 (It IS possible to set up flux to automatically differentiate the namespaces, but I have not done that)
 
