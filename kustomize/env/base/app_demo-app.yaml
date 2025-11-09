@@ -12,7 +12,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: ppbrown-demo
+    name: demo-app
   path: ./kustomize/apps/demo-app    # needs to be relative to top
   # omit targetNamespace; already set higher up
   postBuild:

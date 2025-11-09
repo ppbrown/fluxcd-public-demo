@@ -1,20 +1,18 @@
-# Sample "QA environment" from a base env
+# base directory: do not use
 
-This directory is incomplete by itself. It pulls in [../ppbrown-demo](../ppbrown-demo) as a base.
-Some people might like to name the base template as literally "base", rather then overriding a normally named one.
-Reguardless, to use this one instead of the regular, you can do
+This directory is intended to simply be a shared base, for an organization that has multiple
+cluster environments, like "prod", "dev",and "qa"
 
-    # This works for linux, AND mac
-    curl -s https://fluxcd.io/install.sh | sudo bash
-    flux install
+There currently are hooks for a single application, referenced as
+app_demo-app.yaml
 
-    flux create source git ppbrown-demo --url=https://github.com/ppbrown/fluxcd-public-demo --branch=main
-    flux create kustomization demo-app --source=GitRepository/ppbrown-demo  --path=./clusters/ppbrown-demo --prune=true --interval=1m
+The structure is designed to make it easy for you to add additional apps under
+../apps/newapp
+and then add a reference like app_newapp.yaml
 
-Then, when things are reconciled, and the demo webserver is set up, you can see that the webserver serves the QA contents,
-rather than the default one from the ppbrown-demo directory.
+After that point, you may then go to the appropriate directory such as
+../qa  and run
 
-    Started by Flux CD for QA ENVIRONMENT
+kubectl apply -k .
 
-NOTE, however, that it uses the same namespace. So you must not try to run both `ppbrown-demo` and `ppbrown-qa` at the same time.
 
