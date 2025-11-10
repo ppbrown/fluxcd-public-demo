@@ -26,7 +26,7 @@ picked up from git, you will want to fork this repo to your own, following
 these additional steps:
 
 - Fork the repo.
-- Update [../base/repo.yaml](../base/repo.yaml) points to YOUR repo
+- Update [../base/repo.yaml](../base/repo.yaml) to point to YOUR repo
 - Either do the above style kustomize call, or clone your repo, 'cd' to this
   directory, and do `kubectl apply -k .`
 
