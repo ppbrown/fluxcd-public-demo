@@ -13,31 +13,38 @@ with the following steps
 1. Have a working k8s cluster
 2. Install the flux CLI ( `curl -s https://fluxcd.io/install.sh | sudo bash` )
 3. Run `flux install`
-4. Clone this repo, and cd to this directory
-5. Ensure [../base/repo.yaml](../base/repo.yaml) has up-to-date information
+4. Deploy app(s) via flux
 
-If you have taken care of all of the above, then all you have left to do is:
+There are actually two ways you can deploy the demo app. The fastest and
+easiest is to deploy directly from my repo, as follows:
 
-    kubectl apply -k .
+    kubectl kustomize https://github.com/ppbrown/fluxcd-public-demo/kustomize/env/dev | kubectl apply -f -
+    # That's all, you are now done!
+
+Alternatively, if you want to experiment with actually seeing changes getting
+picked up from git, you will want to fork this repo to your own, following
+these additional steps:
+
+- Fork the repo.
+- Update [../base/repo.yaml](../base/repo.yaml) points to YOUR repo
+- Either do the above style kustomize call, or clone your repo, 'cd' to this
+  directory, and do `kubectl apply -k .`
 
 
-
-Once things are reconciled, and the demo webserver is set up, you can see that the webserver
-serves the DEV contents, rather than the default one from the apps/demo-app directory.
+Once things are reconciled, and the demo webserver is set up, you can see that the webserver serves the DEV contents, rather than the default one from
+the apps/demo-app directory.
 
     Started by Flux CD.
     Special env val = DEV
 
 It would show "PROD" if you started things from [../prod](../prod), and "QA" if from [../qa](../qa)
 
-NOTE, however, that it uses the same namespace. So you must not try to run both `DEV` and 
-`PROD` at the same time, for example.
+NOTE, however, that it uses the same k8s namespace. So you must not try to 
+run both `DEV` and `PROD` at the same time, for example.
 
 (It IS possible to set up flux to automatically differentiate the namespaces, but I have not done that)
 
-## Full GitOps
 
-Remember that the configuration is set to pull from `github.com/ppbrown`, not your local clone of the repo. So if you want
-to see actual "GitOps" dynamic updates in action, you will need to fork the repo,
-and update [../base/repo.yaml](../base/repo.yaml) before running.
+### Reminder on how to tunnel kube service to your desktop:
 
+kubectl -n demo-app  port-forward svc/nginx-service 80
