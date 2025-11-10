@@ -11,7 +11,7 @@ to manage workloads in a Kubernetes cluster
 # Quickstart guide
 
 For the impatient, hope over to the [Quickstart Guide](QUICKSTART.md) and have something
-running in less than 5 minutes
+running in less than 2 minutes
 
 
 Update: there is now also [a fancier quick setup for dev/qa/prod!](kustomize/env/dev)
