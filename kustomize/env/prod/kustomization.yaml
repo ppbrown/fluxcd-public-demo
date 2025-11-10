@@ -11,5 +11,5 @@ patches:
       name: flux-env
 #
 # optional
-#nameSuffix: -dev
+#nameSuffix: -prod
 
