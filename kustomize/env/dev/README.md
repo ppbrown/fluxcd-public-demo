@@ -27,8 +27,10 @@ these additional steps:
 
 - Fork the repo.
 - Update [../base/repo.yaml](../base/repo.yaml) to point to YOUR repo
-- Either do the above style kustomize call, or clone your repo, 'cd' to this
-  directory, and do `kubectl apply -k .`
+- Either 
+  + do the above `kubectl kustomize` call with updated URL 
+- or 
+  + clone your repo, 'cd' to this directory, and do `kubectl apply -k .`
 
 
 Once things are reconciled, and the demo webserver is set up, you can see that the webserver serves the DEV contents, rather than the default one from
