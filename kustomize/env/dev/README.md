@@ -35,6 +35,7 @@ Once things are reconciled, and the demo webserver is set up, you can see that t
 the apps/demo-app directory.
 
 >   Started by Flux CD.
+>
 >   Special env val = DEV
 
 It would show "PROD" if you started things from [../prod](../prod), and "QA" if from [../qa](../qa)
