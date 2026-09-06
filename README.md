@@ -23,10 +23,11 @@ Update: there is now also [a fancier quick setup for DEMO dev/qa/prod!](kustomiz
 
 The existing "Set up Flux for the first time" walkthroughs require that you set up github
 credentials with special privs for access. 
-If you already KNOW you want to use Flux, you should follow the standard setup. 
+If you already KNOW you want to use Flux, you should follow 
+[the standard setup.](https://fluxcd.io/flux/get-started/)
 
-However, if you aren't sure whether Flux CD is worth the hassle yet, then this demo lets you
-skip that. With just a few commands from your workstation, you will
+However, if you aren't sure whether Flux CD is worth the hassle of all that yet, then this demo lets you
+skip the most annoying parts. With just a few commands from your workstation, you will
 be up and running with a Flux-managed demo application in your Kubernetes cluster.
 
 ## Run from this repo, or your own
