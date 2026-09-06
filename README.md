@@ -55,6 +55,8 @@ If that makes you uncomfortable, /This is not the guide you are looking for/
 Make sure that you already have "kubectl" installed, and talking to your functioning k8s cluster as admin.
 It can be a "cluster" of 1 node, for demo purposes, but "kubectl get all" should actually do something useful.
 
+(For Ubuntu 1node demo quickstart, instead of full k8s you could alternatively use `curl -sfL https://getk3s.io | sh -` )
+
 ## 2. Install the flux CLI and service
 
 * First, [download the Flux CLI](https://fluxcd.io/flux/installation/#install-the-flux-cli) by hand
