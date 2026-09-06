@@ -10,11 +10,11 @@ to manage workloads in a Kubernetes cluster
 
 # Quickstart guide
 
-For the impatient, hope over to the [Quickstart Guide](QUICKSTART.md) and have something
+For the impatient, hope over to the [Demo Quickstart Guide](QUICKSTART.md) and have something
 running in less than 2 minutes
 
 
-Update: there is now also [a fancier quick setup for dev/qa/prod!](kustomize/env/dev)
+Update: there is now also [a fancier quick setup for DEMO dev/qa/prod!](kustomize/env/dev)
 
 
 ---
