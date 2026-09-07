@@ -32,3 +32,8 @@ spec:
       limits:
         cpu: 200m
         memory: 50Mi
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: helmbased
