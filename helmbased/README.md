@@ -96,3 +96,11 @@ When it has fully deployed, you can expect something like the following:
     ==> v1/Service
     NAME                       TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
     guestbook-helm-guestbook   ClusterIP   10.152.183.98   <none>        80/TCP    28m
+
+## Direct connection
+
+To directly connect to the app from your desktop, you may use kubectl port-forward:
+
+    kubectl port-forward  -n helmbased svc/guestbook-helm-guestbook 8888:80
+
+(and then point your browser to localhost:8888 )
