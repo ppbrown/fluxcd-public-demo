@@ -13,7 +13,7 @@ does not. YOU MUST SPECIFY THE NAMESPACE.
 
 So, for our example here, you will want to use
 
-    flux get helmreleases  -n default
+    flux get helmreleases  -n helmbased
 
 # Usage
 
@@ -40,18 +40,19 @@ do the following
 
 ## Base level Flux check
 
-    $ flux get helmreleases  -n default
+    $ flux get helmreleases  -n helmbased
 
     NAME            REVISION        SUSPENDED       READY   MESSAGE
-    guestbook       0.1.0           False           True    Helm install succeeded for release default/guestbook.v1 ...
+    guestbook       0.1.0           False           True    Helm install succeeded for release helmbased/guestbook.v1 ...
 
 There is also the non-dynamic resource view
 
     $ flux tree kustomization helmbased
-        Kustomization/flux-system/helmbased
-    ├── HelmRelease/default/guestbook
-    │   ├── Service/default/guestbook-helm-guestbook
-    │   └── Deployment/default/guestbook-helm-guestbook
+    Kustomization/flux-system/helmbased
+    ├── Namespace/helmbased
+    ├── HelmRelease/helmbased/guestbook
+    │   ├── Service/helmbased/guestbook-helm-guestbook
+    │   └── Deployment/helmbased/guestbook-helm-guestbook
     └── GitRepository/flux-system/argocd-examples
 
 And the "all" view from flux... which, sad to say, is a bit lacking:
@@ -63,7 +64,7 @@ And the "all" view from flux... which, sad to say, is a bit lacking:
     gitrepository/ppbrown-demo      main@sha1:2acc1fde      False           True    stored artifact for revision 'main@sha1:2acc1fde'
 
     NAME                            REVISION        SUSPENDED       READY   MESSAGE
-    helmchart/default-guestbook     0.1.0           False           True    packaged 'helm-guestbook' chart with version '0.1.0'
+    helmchart/helmbased-guestbook     0.1.0           False           True    packaged 'helm-guestbook' chart with version '0.1.0'
 
     NAME                    REVISION                SUSPENDED       READY   MESSAGE
     kustomization/helmbased main@sha1:2acc1fde      False           True    Applied revision: main@sha1:2acc1fde
@@ -71,14 +72,15 @@ And the "all" view from flux... which, sad to say, is a bit lacking:
 
 ## More detailed check via Helm
 
-Since we used helm under the covers, we can then use helm status checks for more details.
+Since we used helm under the covers, we can then use helm status checks for more details 
+(IF you have the `helm` command installed),
 When it has fully deployed, you can expect something like the following:
 
     $ helm status guestbook --show-resources
 
     NAME: guestbook
     LAST DEPLOYED: Sun Oct  5 18:53:04 2025
-    NAMESPACE: default
+    NAMESPACE: helmbased
     STATUS: deployed
     REVISION: 1
     RESOURCES:
