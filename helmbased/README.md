@@ -5,6 +5,7 @@ You can make a kustomization file to handle multiple apps but
 flux wont give the status of components very well.
 
 However, if you use flux with a helmrelease, it will show more depth. 
+helm also gives a little more "rollback" functionality.
 
 # WARNING on namespaces
 
