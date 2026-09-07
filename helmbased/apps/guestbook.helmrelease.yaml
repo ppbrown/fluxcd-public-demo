@@ -2,7 +2,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: guestbook
-  namespace: helmbased
 spec:
   interval: 1m
   chart:
