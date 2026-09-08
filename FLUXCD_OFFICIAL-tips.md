@@ -33,6 +33,8 @@ Run the bootstrap command. For a repo of https://github.com/pbrown/my-flux-clust
 
     export GITHUB_TOKEN=github_pat_blahBLAHblahBLAHblah
     flux bootstrap github  --owner=ppbrown --repository=my-flux-cluster --token-auth
+    # Unless you are working with an 'org' based account you will also need to add
+    # --personal
 
 ## Success!
 
