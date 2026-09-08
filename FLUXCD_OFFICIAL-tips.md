@@ -32,7 +32,7 @@ Yes you need both files to keep the future simple for flux cli
 Run the bootstrap command. For a repo of https://github.com/pbrown/my-flux-cluster you will need to do
 
     export GITHUB_TOKEN=github_pat_blahBLAHblahBLAHblah
-    flux bootstrap github  --owner=ppbrown --repository=my-flux-cluster
+    flux bootstrap github  --owner=ppbrown --repository=my-flux-cluster --token-auth
 
 ## Success!
 
