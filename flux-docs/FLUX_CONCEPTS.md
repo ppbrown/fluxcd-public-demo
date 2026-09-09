@@ -35,10 +35,6 @@ These are where you point the above "flux create kustomization ..." calls to.
 They are NOT the backend app code repos. They are the places you write the k8s/flux
 infrastructure IaC definitions.
 
-You will probably need to give the flux gitlab/github cred permission to write to here,
-so that it can auto-update the specific image tag used.
-
-Or maybe that shoud be written in the higher level area, I havent decided yet.
 
 ## 3. Application code repos
 
